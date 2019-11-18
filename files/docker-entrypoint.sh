@@ -59,7 +59,7 @@ if [[ $NRSAVES -eq 0 ]]; then
 fi
 
 if [ -n "$WEBHOOK" ]; then
-   curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"content":"Factorioサーバーが起動しました！"}' "$WEBHOOK";
+   curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"content":"'"$TEXT_START"'"}' "$WEBHOOK";
    touch /opt/factorio/factorio-current.log
    screen -AmdS info_factorio bash /log-info.sh
 fi

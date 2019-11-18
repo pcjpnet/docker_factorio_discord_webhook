@@ -8,9 +8,9 @@ m_module=`echo $m_module | cut -d: -f1`;
 m_mode=`echo $m_msg | cut -d' ' -f2`;
 if [[ $m_module == 'ServerSynchronizer.cpp' ]]; then
   if [[ $m_mode == 'adding' ]]; then
-  curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"content":"Factorioにユーザーがログインしました！"}' "$WEBHOOK";
+  curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"content":"'"$TEXT_LOGIN"'"}' "$WEBHOOK";
   elif [[ $m_mode == 'removing' ]]; then
-  curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"content":"Factorioからユーザーがログアウトしました！"}' "$WEBHOOK";
+  curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"content":"'"$TEXT_LOGOUT"'"}' "$WEBHOOK";
   fi
 fi
 

@@ -18,7 +18,10 @@ ENV PORT=34197 \
     SCRIPTOUTPUT=/factorio/script-output \
     PUID="$PUID" \
     PGID="$PGID" \
-    WEBHOOK=""
+    WEBHOOK="" \
+    TEXT_START="Factorioサーバーが起動しました！" \
+    TEXT_LOGIN="Factorioにユーザーがログインしました！" \
+    TEXT_LOGOUT="Factorioからユーザーがログアウトしました！"
 
 RUN set -ox pipefail \
     && archive="/tmp/factorio_headless_x64_$VERSION.tar.xz" \

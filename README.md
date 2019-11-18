@@ -1,6 +1,6 @@
 # docker_factorio_discord_webhook
 
-Factorio Server with Discord Webhook Notification (Japanese)
+Factorio Server with Discord Webhook Notification
 
 based on this image
 
@@ -11,6 +11,8 @@ based on this image
 # Usage
 
 Set Discord Webhook URL to $WEBHOOK.
+
+Set text to $TEXT_START, $TEXT_LOGIN, $TEXT_LOGOUT.
 
 
 ## Settings for LAN Play
